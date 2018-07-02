@@ -1,18 +1,21 @@
-# Activate and configure extensions
-# https://middlemanapp.com/advanced/configuration/#configuring-extensions
+require 'extensions/build_cleaner'
+require 'extensions/haml_fix'
 
-activate :deploy do |deploy|
-  deploy.build_before = true
-  deploy.deploy_method = :git
+configure :build do
+  activate :relative_assets
+  activate :build_cleaner
 end
+
 
 activate :livereload
-activate :autoprefixer do |prefix|
-  prefix.browsers = "last 2 versions"
-end
+
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
+
+activate :autoprefixer do |prefix|
+  prefix.browsers = "last 2 versions"
+end
 
 # Per-page layout changes
 page '/*.xml', layout: false
@@ -46,12 +49,7 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
-require 'extensions/build_cleaner'
 
-configure :build do
-  activate :relative_assets
-  activate :build_cleaner
-end
 
 # configure :build do
 #   activate :minify_css

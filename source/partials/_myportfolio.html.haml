@@ -1,0 +1,34 @@
+%div.projects
+  %p.text-left.tracking-tight.font-semibold.border-b-4.border-white My Portfolio
+
+.w-full.max-w.flex.flex-col
+  .flex.flex-wrap.items-center.mx-3.mt-6
+    .w-full.items-center.px-3{:class => "md:w-1/3"}
+      %a{href: "https://github.com/ESteinman/ATM_Challenge"}(src="images/atm.jpg")
+        %img.flex-1.w-60.h-60.rounded-full.border-4.border-white.opacity-75(src="images/atm.jpg")
+      .myportfolio
+      - data.myportfolio.each do |myportfolio|
+        %a.tracking-tight.text-2xl.font-semibold.mb-2.a.text-white.no-underline{href: "https://github.com/ESteinman/ATM_Challenge"}= myportfolio[:project1]
+        %br
+        %a.tracking-tight.text-sm.font-medium.italic.mb-2.a.text-white.no-underline{href: "https://github.com/ESteinman/ATM_Challenge"}= myportfolio[:description1]
+        .flex.items-center
+    .w-full.items-center.px-3{:class => "md:w-1/3"}
+      %a{href: "https://github.com/ESteinman/Address_book"}(src="images/atm.jpg")
+        %img.flex-1.w-60.h-60.rounded-full.border-4.border-white.opacity-75.mb-2(src="images/address_book.jpg")
+      .myportfolio
+      - data.myportfolio.each do |myportfolio|
+        %a.tracking-tight.text-2xl.font-semibold.mb-2.a.text-white.no-underline{href: "https://github.com/ESteinman/Address_book"}= myportfolio[:project2]
+        %br
+        %a.tracking-tight.text-sm.font-medium.italic.mb-2.a.text-white.no-underline{href: "https://github.com/ESteinman/Address_book"}= myportfolio[:description2]
+        .flex.items-center
+    .w-full.items-center.px-3{:class => "md:w-1/3"}
+      %a{href: "https://github.com/ESteinman/Weekend-Challenge-Fizz-Buzz"}(src="images/fizz_buzz.jpg")
+        %img.flex-1.w-60.h-60.rounded-full.item-right.border-4.border-white.opacity-75.mb-2(src="images/fizz_buzz.jpg")
+      .myportfolio
+      - data.myportfolio.each do |myportfolio|
+        %a.tracking-tight.text-2xl.font-semibold.mb-2.a.text-white.no-underline{href: "https://github.com/ESteinman/Weekend-Challenge-Fizz-Buzz"}= myportfolio[:project3]
+        %br
+        %a.tracking-tight.text-sm.font-medium.italic.mb-2.a.text-white.no-underline{href: "https://github.com/ESteinman/Weekend-Challenge-Fizz-Buzz"}= myportfolio[:description3]
+        .flex.items-center
+
+

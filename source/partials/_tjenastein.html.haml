@@ -1,0 +1,9 @@
+%div.projects
+  %p.text-right.tracking-tight.font-semibold.border-b-4.border-white CV
+  %img.w-64.h-64.text-right.opacity-75.rounded-full.border-4.border-white.m-5(src="images/dunder_2.JPG")
+  .projects
+  - data.cv.each do |cv|
+    %p.flex.items-center
+      .font-semibold.tracking-tight.text-4xl.mb-2= cv[:name]
+      %p.text-base.font-medium.tracking-tight.text-2xl= cv[:description]
+    .flex.items-center
